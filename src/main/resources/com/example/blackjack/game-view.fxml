@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blackjack.GameController">
+   <children>
+      <Label fx:id="scoreLabel" text="\$###" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveButton" mnemonicParsing="false" onMouseClicked="#onSaveButtonClicked" text="Save Game" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <HBox fx:id="betAmount" alignment="CENTER" layoutY="407.0" prefHeight="39.0" prefWidth="800.0" AnchorPane.bottomAnchor="54.333333333333314" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="407.0">
+         <children>
+            <Label alignment="CENTER" text="Bet Amount: $">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="betTextField" prefHeight="39.0" prefWidth="81.0" text="100">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="63.0" layoutY="272.0" text="Your Hand:" AnchorPane.topAnchor="272.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="37.0" layoutY="91.0" text="Dealer's Hand:" AnchorPane.topAnchor="91.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox fx:id="dealerHand" layoutX="176.0" layoutY="23.0" minHeight="0.0" prefHeight="164.0" prefWidth="624.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="23.0" />
+      <HBox fx:id="userHand" layoutX="176.0" layoutY="204.0" prefHeight="164.0" prefWidth="624.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="204.0" />
+      <Label fx:id="dealerValueLabel" layoutX="61.0" layoutY="119.0" prefHeight="17.0" prefWidth="65.0" text="Value: " AnchorPane.topAnchor="119.0" />
+      <Label fx:id="userValueLabel" layoutX="61.0" layoutY="299.0" prefHeight="17.0" prefWidth="65.0" text="Value: " AnchorPane.topAnchor="299.0" />
+      <Label fx:id="hitLabel" alignment="CENTER" layoutX="247.0" layoutY="357.0" onMouseClicked="#onHitLabelClicked" prefHeight="50.0" prefWidth="75.0" text="Hit" AnchorPane.leftAnchor="247.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="holdLabel" alignment="CENTER" layoutX="488.0" layoutY="357.0" onMouseClicked="#onHoldLabelClicked" prefHeight="50.0" prefWidth="75.0" text="Hold" AnchorPane.rightAnchor="247.66666666666663">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="betLabel" alignment="CENTER" layoutX="362.0" layoutY="438.0" onMouseClicked="#onBetLabelClicked" prefHeight="50.0" prefWidth="75.0" text="Bet" AnchorPane.bottomAnchor="9.999999999999982">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="cheatLabel" alignment="CENTER" layoutX="710.0" layoutY="438.0" onMouseClicked="#onCheatLabelClicked" text="Cheat" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameTextLabel" layoutY="159.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
